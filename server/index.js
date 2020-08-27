@@ -2,11 +2,15 @@ const express = require('express');
 const socketio = require('socket.io');
 const http = require('http');
 
+// 추가
+const {addUser, removeUser, getUser, getUsersInRoom} = require('./users.js');
+
+
 const PORT = process.env.PORT || 5000;
 
 const router = require('./router');
 
-
+//1:05:59 
 
 const app = express();
 const server = http.createServer(app);
